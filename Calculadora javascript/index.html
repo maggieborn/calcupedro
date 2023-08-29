@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcuestilo.css">
+    <title>Calculadora</title>
+    <link rel="icon" type="image/png" href="calcu4.png" />
+
+</head>
+
+<body>
+
+    <audio controls autoplay>
+        <source src="Hey_Sexy_Lady.mp3" type="audio/mp3">
+        <I>Your browser does not support the audio element.</I>
+    </audio>
+
+    <h1 class="titulo" id="title"> Calculadora </h1>
+
+    <div class="pedrito">
+        <img src="pedro.png" alt="Pedro Pascal sosteniendo una calculadora" id="pedrito_img">
+    </div>
+
+    <div class="formulario">
+        <div class="form_container">
+            <form id="form_calculator" class='form_container'>
+
+                <label for="nro1" class="form label">Número 1:</label>
+                <input type="text" id="nro1" class="form input" name="nro1" required><br>
+                <label for="nro2" class="form label">Número 2:</label>
+                <input type="text" id="nro2" class="form input" name="nro2" required><br>
+        </div>
+
+        <select name="operation" id="operation" class="form select">
+            <option value="add">Sumar</option>
+            <option value="substr">Restar</option>
+            <option value="div">Dividir</option>
+            <option value="mult">Multiplicar</option>
+        </select>
+
+        <button id="submit">Enviar</button>
+        </form>
+
+        <div id="result">
+        </div>
+    </div>
+
+    <script>
+
+        const input1 = document.getElementById("nro1");
+        const input2 = document.getElementById("nro2");
+
+        const form = document.getElementById("form_calculator");
+
+        //function definition via FUNCTION keyword (can be instantiated before definition)
+        // function sumar(num1, num2){
+        //     return num1+num2;
+        // }
+
+        //arrow format function, cannot be instantiated before definition
+
+        // const sumar = (num1, num2) => {
+        //     return num1 + num2;
+        // }
+
+        const calculadora = (event) => {
+
+            event.preventDefault();
+
+            let num1 = parseFloat(input1.value);
+            let num2 = parseFloat(input2.value);
+            let body;
+
+            let resultado;
+
+            const result = document.getElementById("result");
+            let operation = document.getElementById("operation").value;
+
+            const p = document.createElement("p");
+            result.classList.add("resultado");
+
+            switch (operation) {
+                case 'add':
+                    resultado = num1 + num2;
+                    operation = "Suma";
+                    break;
+
+                case 'substr':
+                    resultado = num1 - num2;
+                    operation = "Resta";
+                    break;
+
+                case 'div':
+                    resultado = num1 / num2;
+                    operation = "División";
+                    break;
+
+                case 'mult':
+                    resultado = num1 * num2;
+                    operation = "Multiplicación";
+                    break;
+            }
+
+            body = `El resultado es: ${resultado}.`;
+
+            result.innerHTML = "";
+            p.innerText = body;
+            result.appendChild(p);
+
+        }
+
+        //eventHandler
+        //const btn_submit=document.getElementById("submit");
+        //btn_submit.onclick("click",sumar(num1,num2));
+
+        const btn_submit = document.getElementById("submit");
+        btn_submit.addEventListener("click", calculadora);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+
+body {
+    background-image: url("pedro-pascal-pedro-pascal-daddy.gif");
+}
+
+h1 {
+    background-color: #423640;
+    color: #d806c7;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    font-size: 2.7rem;
+  }
+
+button {
+  background-color: #423640;
+  color: #d806c7;
+  padding: 10px;
+  text-align: center;
+}
+
+.formulario {
+  background-color: #423640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #d806c7;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.form_container{
+  display:flex;
+  justify-content: center;
+}
+
+.form {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 10px;
+  padding: 10px;
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  display: block;
+}
+
+.select{
+  margin-bottom: 25px;
+  background-color: #c84abd;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.select option{
+  text-align: center;
+  background-color: #d0569d;
+}
+
+.input{
+  width:20%;
+  justify-self: center;
+  border-radius: 10px;
+  border-color: #d806c7;
+  font-size: large;
+}
+
+#pedrito_img {
+  width: 20%;
+  height: 20%;
+}
+
+.pedrito {
+  background-color: violet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.label {
+  font-size: 2em;
+  width: 20%;
+}
+
+.formulario .form_container .form.label:nth-of-type(2){
+  margin-left: 70px;
+}
+
+#submit {
+  font-size: 1.5em;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 10px 5px 15px rgb(161, 19, 140);
+  cursor: pointer;
+}
+
+#submit:hover{
+  transform: scale(1.1);
+  background-color: #202020;
+}
+
+.resultado {
+  margin: 5% 25% ;
+  background-color: #c84abd;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border-color: #000000;
+}
